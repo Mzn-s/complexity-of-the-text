@@ -1,0 +1,23 @@
+h1{
+    text-align: center;
+    font-family: 'fangsong', sans-serif;
+    font-size: 1.6rem;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  border-spacing: 0px;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  border-spacing: 0px;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}

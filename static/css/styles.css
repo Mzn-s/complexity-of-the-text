@@ -1,0 +1,214 @@
+body {
+    font-family: 'Roboto', sans-serif!important;
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+
+.mainscreen
+{
+	min-height: 100vh;
+	width: 100%;
+    height: 1010%;
+	display: flex;
+    flex-direction: column;
+    background-color: #DFDBE5;
+    background-image: url("https://wallpaperaccess.com/full/3063067.png");
+    color:#963E7B;
+
+}
+
+.card {
+	width: 70%;
+    height: 1000%;
+    margin: auto;
+    background: white;
+    position:center;
+    align-self: center;
+    top: 50rem;
+    border-radius: 1.5rem;
+    box-shadow: 4px 3px 20px #3535358c;
+    display:flex;
+    height: 90%;
+    flex-direction: row;
+    flex: 1;
+    margin-top:70px;
+    margin-bottom:50px;
+}
+
+.leftside {
+	background: #963e7b;
+	width: 35%;
+	/*display: inline-flex;*/
+    align-items: center;
+    justify-content: center;
+	border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+
+}
+
+.resultHeader{
+    margin-top: 8.5%;
+    color: #ffffff;
+}
+
+.result{
+    line-height: 1.7;
+    font-family: 'fantasy';
+    font-size: 1.3rem;
+    width: 85%;
+    color: #ffffff;
+    margin: 1%;
+    padding: 10px;
+    word-wrap: break-word;
+    text-shadow: 1px 1px 5px #000;
+}
+
+a {
+    margin-top: 1em ;
+  outline: none;
+  text-decoration: none;
+  padding: 2px 1px 2px 2px;
+}
+a:link {
+  color: #ffffff;
+}
+
+a:visited {
+  color: #ffffff;
+}
+
+a:focus {
+  border-bottom: 1px solid;
+  background: #7B68EE;
+}
+
+a:hover {
+  border-bottom: 1px solid;
+  background: #7B68EE;
+}
+
+a:active {
+  background: #265301;
+  color: #7B68EE;
+}
+
+
+.product {
+    object-fit: cover;
+	width: 20em;
+    height: 20em;
+    border-radius: 100%;
+}
+
+.rightside {
+    background-color: #ffffff;
+    word-wrap: break-word;
+	width: 65%;
+	border-bottom-right-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    padding: 1.5rem;
+}
+
+form {
+	height: 80%;
+}
+
+h1{
+    text-align: center;
+    font-family: 'fangsong', sans-serif;
+    font-size: 1.6rem;
+}
+
+h2{
+	font-family: 'fantasy';
+	color: #000000;
+    font-size: 1.3rem;
+}
+
+p{
+    display:block;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin: .8rem 0;
+}
+
+
+/*.inputbox*/
+.rightside textarea#message {
+    color:#030303;
+	width: 100%;
+    height: 50%;
+    padding: 0.5rem;
+    border: none;
+    border-bottom: 1.5px solid #ccc;
+    margin-bottom: 0rem;
+    border-radius: 0.3rem;
+    font-family: 'Roboto', sans-serif;
+    color: #615a5a;
+    font-size: 1.1rem;
+    font-weight: 500;
+  	outline:none;
+}
+
+.file{
+  color: white;
+  text-decoration: none;
+  padding: 10px 25px;
+  background: linear-gradient(
+135deg
+, #753370 0%, #298096 100%);
+     border: none;
+    border-radius: 50px;
+}
+
+/*.button*/
+.rightside input#submit{
+    text-align: center;
+    background: linear-gradient(
+135deg
+, #753370 0%, #298096 100%);
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-top: 5px;
+    margin-bottom: 100px;
+    width:100%;
+    height: 10%;
+    letter-spacing: .11rem;
+    outline:none;
+}
+
+/*.button:hover*/
+.rightside input#submit:hover{
+	transform: scale(1.05) translateY(-3px);
+    box-shadow: 3px 3px 6px #38373785;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .card{
+        flex-direction: column;
+        width: auto;
+      
+    }
+
+    .leftside{
+        width: 100%;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0;
+      border-top-right-radius:0;
+      border-radius:0;
+    }
+
+    .rightside{
+        width:auto;
+        border-bottom-left-radius: 1.5rem;
+        padding:0.5rem 3rem 3rem 2rem;
+      border-radius:0;
+    }
+}

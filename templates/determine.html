@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+    <title>
+        TEXT COMPLEXITY ASSESSMENT
+    </title>
+    <link rel="shortcut icon" href="{{url_for('.static', filename='favicon.ico')}}">
+</head>
+
+{% block content %}
+<body>
+<div class="mainscreen">
+      <div class="card">
+        <div class="leftside">
+            <h1 class="resultHeader" >Результат</h1>
+            <hr>
+            {% for message in get_flashed_messages() %}
+                {% if message is string %}
+                    <p class="result" > {{ message }}  </p>
+                {% else %}
+                    {% for key, value in message.items() %}
+                        <p class="result" > {{ key }}: {{ value['value'] }}
+                        <br /><a target="_blank" href="{{url_for('.static', filename='tables/' + key + '.html')}}">{{ value['index'] }}</a>
+                        <hr>
+                    </p>
+                    {% endfor %}
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        <div class="rightside">
+            <form action="{{ url_for('determine') }}" method=post enctype="multipart/form-data">
+            <h1>Cервис определения сложности иностранного текста (EN)</h1>
+            <hr>
+            <h2>Введите текст или выберите файл (txt, application/octet-stream): </h2>
+            {{ form.csrf_token }}
+            {{ form.message(placeholder='Write your request ...') }} 
+            <p class="file" > {{ form.file }} </p>
+            <p class="button" > {{ form.submit }} </p>
+          </form>
+        </div>
+      </div>
+</div>
+<!-- partial -->
+  
+</body>
+
+{% endblock %}
+</html>
+
+<!-- add the right css file -->
+{% block styles %}
+<link rel="stylesheet" href="{{url_for('.static', filename='css/styles.css')}}">
+{% endblock %}
